@@ -1,0 +1,95 @@
+﻿@model PraktyczneKursy.ViewModels.KoszykViewModel
+@using PraktyczneKursy.Infrastructure
+@{
+    ViewBag.Title = "Koszyk";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="ListaKategoriZawartosc">
+    @Html.Action("KategorieMenu", "Kursy")
+    <div id="KategorieListPrawaSekcja">
+        <div id="Breadcrumb">
+            <img src="../Content/Images/dommaly.png" />
+            <a href="">
+                @Html.MvcSiteMap().SiteMapPath()
+            </a>
+        </div>
+
+        <section class="SekcjaKoszyk">
+            <div class="SekcjaHeader" style="margin-bottom: 0px;">
+                <h1>Twój koszyk</h1>
+            </div>
+
+            <table id="koszykTabela">
+                @foreach (var pozycjaKoszyka in Model.PozycjeKoszyka)
+                {
+                    <tr id="koszyk-wiersz-@pozycjaKoszyka.Kurs.KursId">
+                        <td>
+                            <a href="@Url.Action("Szczegoly","Kursy", new { id = pozycjaKoszyka.Kurs.KursId })">
+                                <img src="@Url.Content("~/Content/Kursy/" + pozycjaKoszyka.Kurs.NazwaPlikuObrazka)" />
+                            </a>
+                        </td>
+                        <td><a href="@Url.Action("Szczegoly","Kursy", new { id = pozycjaKoszyka.Kurs.KursId })">@pozycjaKoszyka.Kurs.TytulKursu</a></td>
+                        <td>Ilość: <span id="koszyk-ilosc-pozycji-@pozycjaKoszyka.Kurs.KursId">@pozycjaKoszyka.Ilosc</span></td>
+                        <td>@String.Format("{0:0.##}", pozycjaKoszyka.Wartosc) zł</td>
+                        <td><a class="usunKurs" data-id="@pozycjaKoszyka.Kurs.KursId" href="#">Usuń</a></td>
+                    </tr>
+                }
+
+                <tr id="koszyk-empty-message" @if (Model.PozycjeKoszyka != null && Model.PozycjeKoszyka.Count > 0) { <text> class="hidden" </text>    }>
+                    <td>Twój koszyk jest pusty. Może chcesz coś dodać do koszyka?</td>
+                </tr>
+            </table>
+
+            <div id="CenaCalkowita" style="">
+                Razem: <span id="calkowita-cena-wartosc">@String.Format("{0:0.##}", Model.CenaCalkowita)</span> zł
+            </div>
+
+            <div class="SekcjaPrzyciski">
+                <a class="PrzyciskLink" href="@Url.Content("~/")">Kontynułuj zakupy</a>
+                @if (Model.CenaCalkowita > 0)
+                {
+                    <a class="PrzyciskLink" id="koszyk-button-zaplac" href="@Url.Action("Zaplac","Koszyk")">Zapłać</a>
+                }
+            </div>
+        </section>
+    </div>
+</div>
+@section Scripts{
+    
+@System.Web.Optimization.Scripts.Render("~/bundles/jqueryAndJqueryUI")
+
+<script type="text/javascript">
+        $(function () {
+            $(".usunKurs").click(function () {
+
+                var recordDoUsuniecia = $(this).attr("data-id");
+
+                if (recordDoUsuniecia != '') {
+                    $.post("/Koszyk/UsunZKoszyka", { "kursId": recordDoUsuniecia },
+                        function (response) {
+                            if (response.IloscPozycjiUsuwanej == 0) {
+
+                                $('#koszyk-wiersz-' + response.IdPozycjiUsuwanej).fadeOut('slow', function () {
+                                    if (response.KoszykIloscPozycji == 0) {
+                                        $("#koszyk-empty-message").removeClass("hidden");
+                                    }
+                                });
+                            } else {
+                                $('#koszyk-ilosc-pozycji-' + response.IdPozycjiUsuwanej).text(response.IloscPozycjiUsuwanej);
+                            }
+
+                            if (response.KoszykIloscPozycji == 0) {
+                                $('#koszyk-button-zaplac').addClass('hidden');
+                                $('#CenaCalkowita').addClass('invisible');
+                            }
+                            $('#calkowita-cena-wartosc').text(response.KoszykCenaCalkowita);
+                            $('#koszyk-naglowek-ilosc-elementow').text(response.KoszykIloscPozycji);
+                        });
+                    return false;
+                }
+            });
+        });
+</script>
+ }
+

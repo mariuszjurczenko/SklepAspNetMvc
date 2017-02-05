@@ -1,0 +1,103 @@
+﻿@model PraktyczneKursy.ViewModels.EditKursViewModel
+@{
+    ViewBag.Title = "DodajKurs";
+    Layout = "~/Views/Shared/_ManageLayout.cshtml";
+}
+<hr />
+<h2 class="manageHeader">Edycja produktu</h2>
+<div>
+    @if (Model.Potwierdzenie.HasValue && Model.Potwierdzenie.Value)
+    {
+        <div style="text-align: center; margin: 50px;">
+            Pomyślnie wprowadzono zmiany!
+        </div>
+    }
+
+    @using (@Html.BeginForm("DodajKurs", "Manage", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="error-summary-centered">
+            @Html.ValidationSummary()
+        </div>
+        @Html.HiddenFor(o => o.Kurs.KursId)
+        @Html.HiddenFor(o => o.Kurs.DataDodania)
+        @Html.HiddenFor(o => o.Kurs.NazwaPlikuObrazka)
+
+        <div style="text-align: center;">
+            <table id="albumedit-address-table">
+                <tr>
+                    <td>@Html.LabelFor(o => o.Kurs.AutorKursu, "Autor:")</td>
+                    <td>@Html.TextBoxFor(o => o.Kurs.AutorKursu)</td>
+                    <td>@Html.ValidationMessageFor(o => o.Kurs.AutorKursu)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.Kurs.TytulKursu, "Kurs:")</td>
+                    <td>@Html.TextBoxFor(o => o.Kurs.TytulKursu)</td>
+                    <td>@Html.ValidationMessageFor(o => o.Kurs.TytulKursu)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.Kurs.OpisKursu, "Opis:")</td>
+                    <td>@Html.TextBoxFor(o => o.Kurs.OpisKursu)</td>
+                    <td>@Html.ValidationMessageFor(o => o.Kurs.OpisKursu)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.Kurs.OpisSkrocony, "Opis skrócony:")</td>
+                    <td>@Html.TextBoxFor(o => o.Kurs.OpisSkrocony)</td>
+                    <td>@Html.ValidationMessageFor(o => o.Kurs.OpisSkrocony)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.Kategorie, "Kategoria:")</td>
+                    <td>@Html.DropDownListFor(m => m.Kurs.KategoriaId, new SelectList(Model.Kategorie, "KategoriaId", "NazwaKategorii", Model.Kategorie.First().KategoriaId))</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.Kurs.CenaKursu, "Cena:")</td>
+                    <td>@Html.TextBoxFor(o => o.Kurs.CenaKursu)</td>
+                    <td>@Html.ValidationMessageFor(o => o.Kurs.CenaKursu)</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(o => o.Kurs.Bestseller, "Bestseller:")</td>
+                    <td>@Html.CheckBoxFor(o => o.Kurs.Bestseller)</td>
+                    <td></td>
+                </tr>
+                @if (ViewBag.EditMode == null || !ViewBag.EditMode)
+                {
+                    <tr>
+                        <td colspan="3">
+                            <div class="upload">
+                                <input type="file" name="file" />
+                            </div>
+                        </td>
+                    </tr>
+                }
+                <tr>
+
+                    <td style="text-align: left">
+                        @if (ViewBag.EditMode)
+                        {
+                            if (Model.Kurs.Ukryty)
+                            {
+                                <a href="@Url.Action("PokazKurs", "Manage", new { kursId = Model.Kurs.KursId })" style="display: block; margin-top: 15px; font-weight: bold;">
+                                    Przywróć
+                                </a>
+                            }
+                            else
+                            {
+                                <a href="@Url.Action("UkryjKurs", "Manage", new { kursId = Model.Kurs.KursId })" style="display: block; margin-top: 15px; font-weight: bold;">
+                                    Usuń
+                                </a>
+                            }
+                        }
+                    </td>
+
+
+                    <td style="text-align: right;">
+                        <input type="submit" value="Zapisz" class="submitLink" style="height: 40px; margin-right: 0px; margin-top: 30px; font-weight: bold;" />
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    }
+</div>

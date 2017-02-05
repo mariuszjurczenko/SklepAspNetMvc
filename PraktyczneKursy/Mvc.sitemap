@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index">
+    <mvcSiteMapNode title="Kategorie" controller="Kursy" action="Lista" dynamicNodeProvider="PraktyczneKursy.Infrastructure.KategorieDynamicNodeProvider, PraktyczneKursy" >
+      <mvcSiteMapNode title="Kurs" controller="Kursy" action="Szczegoly" dynamicNodeProvider="PraktyczneKursy.Infrastructure.KursySzczegolyDynamicNodeProvider, PraktyczneKursy" />
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Koszyk" controller="Koszyk" action="Index">
+        <mvcSiteMapNode title="Dane zamowienia" controller="Koszyk" action="Zaplac"/>
+        <mvcSiteMapNode title="Potwierdzenie zamowienia" controller="Koszyk" action="PotwierdzZamowienie"/>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Konto" controller="Manage" action="Index">
+      <mvcSiteMapNode title="Rejestracja" controller="Account" action="Register" />
+      <mvcSiteMapNode title="Logowanie" controller="Account" action="Login" />
+      <mvcSiteMapNode title="Edycja kursu" controller="Manage" action="DodajKurs" />
+      <mvcSiteMapNode title="Twoje dane" controller="Manage" action="Index" />
+      <mvcSiteMapNode title="Zamówienia" controller="Manage" action="ListaZamowien" />
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+</mvcSiteMap>

@@ -1,0 +1,44 @@
+﻿@model PraktyczneKursy.ViewModels.PotwierdzenieZamowieniaEmail
+Content-Type: text/html; charset=utf-8
+
+<html>
+<body>
+
+    @Html.EmbedImage("~/content/Images/logo.png")
+
+    <p>Dziękujemy!</p>
+    <p>Złożyłeś zamówienie w serwisie praktyczne kursy.</p>
+    <p>Zamówione pozycje :</p>
+
+    @{
+        IEnumerable<PraktyczneKursy.Models.PozycjaZamowienia> pozycjeZamowienia = Model.PozycjeZamowienia;
+
+        for (int i = 0; i < pozycjeZamowienia.Count(); i++)
+        {
+            <p>
+                @pozycjeZamowienia.ElementAt(i).kurs.TytulKursu - @pozycjeZamowienia.ElementAt(i).kurs.AutorKursu
+                - @pozycjeZamowienia.ElementAt(i).kurs.CenaKursu zł. - @pozycjeZamowienia.ElementAt(i).Ilosc szt.
+            </p>
+            <p>
+                @Html.EmbedImage(Path.Combine((string)Model.sciezkaObrazka, pozycjeZamowienia.ElementAt(i).kurs.NazwaPlikuObrazka), "", new { @width = 200, @class = "mcnImage", @style = "padding-bottom: 0px;max-width: 500px;border: 0;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;vertical-align: bottom;" })
+            </p>          
+        }
+    }
+
+    <p>Prosimy o przelanie kwoty @Model.Wartosc zł, tytułem: "zamówienie nr @Model.NumerZamowienia" na nasze konto bankowe:</p>
+    <p>Praktyczne kursy Sp. z o.o</p>
+    <p>ul. Mila 16/11</p>
+    <p>40-678 Tychy</p>
+    <p>PKO BP 10 0000 0000 0000 0000 0000 </p>
+
+    <p>Zaraz po otrzymaniu środków uzyskasz pełny dostęp do kursu</p>
+    <p>Dziękujemy i zapraszamy ponownie!</p>
+    <p>PraktyczneKursy.pl</p>
+
+
+</body>
+
+</html>
+
+
+

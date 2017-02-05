@@ -1,0 +1,67 @@
+﻿@model PraktyczneKursy.Models.Zamowienie
+
+@{
+    ViewBag.Title = "Zaplac";
+    Layout = "~/Views/Shared/_RightSectionLayout.cshtml";
+}
+
+@section SectionTitle{
+    Uzupełnij dane zamówienia
+}
+
+
+@using (@Html.BeginForm("Zaplac", "Koszyk"))
+            {
+    <table id="checkout-address-table">
+        <tr>
+            <td>@Html.LabelFor(o => o.Imie, "Imię:")</td>
+            <td>@Html.TextBoxFor(o => o.Imie)</td>
+            <td>@Html.ValidationMessageFor(o => o.Imie)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(o => o.Nazwisko, "Nazwisko")</td>
+            <td>@Html.TextBoxFor(o => o.Nazwisko)</td>
+            <td>@Html.ValidationMessageFor(o => o.Nazwisko)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(o => o.Adres, "Adres")</td>
+            <td>@Html.TextBoxFor(o => o.Adres)</td>
+            <td>@Html.ValidationMessageFor(o => o.Adres)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(o => o.Miasto, "Miasto")</td>
+            <td>@Html.TextBoxFor(o => o.Miasto)</td>
+            <td>@Html.ValidationMessageFor(o => o.Miasto)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(o => o.KodPocztowy, "Kod pocztowy")</td>
+            <td>@Html.TextBoxFor(o => o.KodPocztowy)</td>
+            <td>@Html.ValidationMessageFor(o => o.KodPocztowy)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(o => o.Telefon, "Numer telefonu")</td>
+            <td>@Html.TextBoxFor(o => o.Telefon)</td>
+            <td>@Html.ValidationMessageFor(o => o.Telefon)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(o => o.Email, "Adres e-mail")</td>
+            <td>@Html.TextBoxFor(o => o.Email)</td>
+            <td>@Html.ValidationMessageFor(o => o.Email)</td>
+        </tr>
+        <tr>
+            <td><label for="Komentarz">Uwagi</label></td>
+            <td>
+                <textarea cols="40" rows="3" name="Komentarz">@Model.Komentarz</textarea>
+            </td>
+        </tr>
+    </table>
+
+                @Html.ValidationSummary()
+
+                <hr style="margin-bottom: 50px;" />
+
+                <div class="SekcjaPrzyciski">
+                    <a class="PrzyciskLink" href="">Wróć</a>
+                    <input type="submit" class="PrzyciskLink" style="" value="Potwierdź" />
+                </div>
+}

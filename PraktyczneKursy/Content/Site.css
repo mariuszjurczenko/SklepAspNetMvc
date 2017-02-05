@@ -1,0 +1,1171 @@
+﻿html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+input, select, textarea, button {
+    font-family: inherit;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+    nav ul {
+        list-style: none;
+    }
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #DADADA;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input, select {
+    vertical-align: middle;
+}
+
+/* Main page styles */
+
+body {
+    width: 1000px;
+    margin: auto;
+    font-family: 'Segoe UI';
+}
+
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+    color: black;
+}
+
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+#koszykHeaderLink {
+    width: 143px;
+    height: 42px;
+    background-color: #0a5d7c;
+    color: white;
+    float: right;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+    #koszykHeaderLink > #koszyk-header-logo {
+        width: 42px;
+        height: 42px;
+        background-color: #585858;
+        float: right;
+        background-image: url(../Content/Images/koszyk_white.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+#indexHeaderLogo {
+    margin-top: 25px;
+    margin-bottom: 35px;
+    display: block;
+}
+
+#baner{
+    vertical-align: top;
+}
+
+nav.kategorieHorizontal ul {
+    overflow: hidden;
+    border-left: 1px solid #E5E5E5;
+    border-top: 1px solid #E5E5E5;
+    font-size: 18px;
+    font-family: 'Segoe UI Semibold', 'Segoe WP', 'Segoe UI';
+}
+
+    nav.kategorieHorizontal ul li {
+        margin: auto;
+        float: left;
+        width: 332px;
+        /*padding-left: 50px;*/
+        height: 54px;
+        text-align: left;
+        border-right: 1px solid #E5E5E5;
+        border-bottom: 1px solid #E5E5E5;
+        line-height: 54px;
+    }
+
+        nav.kategorieHorizontal ul li a {
+            width: 100%;
+            display: block;
+            height: 100%;
+            padding-left: 127px;
+            background-repeat: no-repeat;
+            background-position-x: 50px;
+            background-position-y: 50%;
+        }
+
+        nav.kategorieHorizontal ul li:hover {
+            -moz-box-shadow: inset 0 0 3px #bbbbbb;
+            -webkit-box-shadow: inset 0 0 3px #bbbbbb;
+            box-shadow: inset 0 0 3px #bbbbbb;
+        }
+
+
+#ListaKategoriZawartosc {
+    overflow: hidden;
+}
+
+#KategorieListPrawaSekcja {
+    float: left;
+    margin-left: 29px;
+}
+
+#Breadcrumb {
+    height: 28px;
+    font-size: 14px;
+}
+
+    #Breadcrumb a {
+        margin-left: 5px;
+        width: 200px;
+    }
+
+
+nav.KategorieVertical {
+    width: 202px;
+    font-size: 18px;
+    font-family: 'Segoe UI Semibold', 'Segoe WP', 'Segoe UI';
+    border-right: 1px solid #E5E5E5;
+    float: left;
+}
+
+    nav.KategorieVertical ul li {
+        height: 50px;
+        line-height: 50px;
+    }
+
+        nav.KategorieVertical ul li:hover {
+            background-color: #EBEBEB;
+        }
+
+        nav.KategorieVertical ul li a {
+            width: 100%;
+            display: block;
+            height: 100%;
+            padding-left: 75px;
+            background-repeat: no-repeat;
+            background-position-x: 5px;
+            background-position-y: 50%;
+        }
+
+#SekcjaKurs {
+    width: 768px;
+    float: left;
+    margin-top: 20px;
+}
+
+#KursLewa {
+    width: 335px;
+    float: left;
+    margin-right: 28px;
+}
+
+    #KursLewa img {
+        height: 335px;
+        float: left;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+#product-details-share {
+    margin-top: 40px;
+    margin-left: 62px;
+    text-align: center;
+    display: block;
+    float: left;
+    width: 280px;
+}
+
+    #product-details-share a {
+        margin-top: 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 60px;
+        height: 60px;
+        float: left;
+    }
+
+    #product-details-share > div {
+        width: 1px;
+        height: 120px;
+        border-left: 1px solid #E5E5E5;
+        float: left;
+    }
+
+    #product-details-share a:first-child {
+        margin-right: 50px;
+        background-image: url(../Content/Images/fb-share.png);
+    }
+
+    #product-details-share a:last-child {
+        margin-left: 50px;
+        background-image: url(../Content/Images/twitter-share.png);
+    }
+
+#KursPrawa {
+    float: left;
+    width: 405px;
+}
+
+    #KursPrawa #KursNazwa {
+        border: 5px solid #0a5d7c;
+    }
+
+        #KursPrawa #KursNazwa > h1 {
+            margin-top: 20px;
+            font-family: 'Segoe UI Light';
+            font-size: 38px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #39312d;
+            text-align: center;
+        }
+
+        #KursPrawa #KursNazwa > h2 {
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-family: 'Segoe UI Light';
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #39312d;
+            text-align: center;
+        }
+
+#KursCena {
+    overflow: hidden;
+}
+
+    #KursCena > div {
+        float: left;
+        width: 332px;
+        height: 67px;
+        text-align: center;
+        background-color: #0a5d7c;
+        color: white;
+        font-size: 56px;
+        line-height: 56px;
+        font-weight: normal;
+    }
+
+        #KursCena > div > span {
+            font-size: 19px;
+            font-family: 'Segoe UI Light';
+            margin-left: 5px;
+        }
+
+    #KursCena > a {
+        float: left;
+        width: 73px;
+        height: 67px;
+        background-color: #0a5d7c;
+        background-image: url(../Content/Images/koszyk-details.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+
+#KursOpis {
+    font-size: 18px;
+    line-height: 22px;
+    color: #39312E;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: justify;
+}
+
+#KursInfo {
+    font-size: 18px;
+    line-height: 22px;
+    color: #39312E;
+    margin-top: 40px;
+    text-align: justify;
+    border-top: 1px solid #E5E5E5;
+    padding-top: 40px;
+}
+
+#SekcjaListaKategori {
+    width: 768px;
+    margin-top: 20px;
+}
+
+ul.duzaListaKursy li {
+    width: 333.33px;
+    height: 333.33px;
+}
+
+    ul.duzaListaKursy li a h1 {
+        top: 45%;
+    }
+
+    ul.duzaListaKursy li a:hover h1 {
+        top: 46%;
+    }
+
+ul.MalaListaKategorii li {
+    width: 256px;
+    height: 256px;
+}
+
+    ul.MalaListaKategorii li a h1 {
+        top: 40%;
+    }
+
+    ul.MalaListaKategorii li a:hover h1 {
+        top: 41%;
+    }
+
+
+ul.KursyTrzyKolumny {
+    overflow: hidden;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+    ul.KursyTrzyKolumny li {
+        float: left;
+        position: relative;
+        /*opacity: 0.2;*/
+    }
+
+        ul.KursyTrzyKolumny li article {
+            height: 100%;
+        }
+
+        ul.KursyTrzyKolumny li a.dodajDoKoszykaLink {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+            ul.KursyTrzyKolumny li a.dodajDoKoszykaLink img {
+                z-index: 2;
+                position: relative;
+                vertical-align: top;
+            }
+
+        ul.KursyTrzyKolumny li a.kursSzczegolyLink {
+            display: block;
+            height: 100%;
+        }
+
+        ul.KursyTrzyKolumny li a h1 {
+            background-color: rgba(255, 255, 255, 0.2);
+            vertical-align: central;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            font-weight: normal;
+            /* More intensive album title */
+            /* font-family: 'Segoe UI Semibold', 'Segoe WP', 'Segoe UI'; */
+            -webkit-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        ul.KursyTrzyKolumny li a:hover h1 {
+            background-color: rgba(255, 255, 255, 0.85);
+            -webkit-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+
+        ul.KursyTrzyKolumny li a img.kurs {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            -webkit-transition: opacity 0.5s ease;
+            -o-transition: opacity 0.5s ease;
+            -moz-transition: opacity 0.5s ease;
+            transition: opacity 0.5s ease;
+        }
+
+        ul.KursyTrzyKolumny li a:hover img.kurs {
+            opacity: 0.8;
+            -webkit-transition: opacity 1s ease;
+            -o-transition: opacity 1s ease;
+            -moz-transition: opacity 1s ease;
+            transition: opacity 1s ease;
+        }
+
+ul.duzaListaKursy-bottom li {
+    width: 333.33px;
+    height: 333.33px;
+    font-size: 15px;
+}
+
+    ul.duzaListaKursy-bottom li a h1 {
+        bottom: 0px;
+    }
+
+
+ul.TrzyKolumnyList {
+    overflow: hidden;
+    list-style-type: none;
+    font-size: 18px;
+}
+
+    ul.TrzyKolumnyList li {
+        float: left;
+        position: relative;
+        /*opacity: 0.2;*/
+    }
+
+        ul.TrzyKolumnyList li article {
+            height: 100%;
+        }
+
+
+        ul.TrzyKolumnyList li a.kursSzczegolyLink {
+            display: block;
+            height: 100%;
+        }
+
+        ul.TrzyKolumnyList li a h1 {
+            background-color: rgba(255, 255, 255, 0);
+            vertical-align: central;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            font-weight: normal;
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        ul.TrzyKolumnyList li a:hover h1 {
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        ul.TrzyKolumnyList li a img.kurs {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        ul.TrzyKolumnyList li a:hover img.kurs {
+        }
+
+.manageHeader {
+    margin-bottom: 30px;
+}
+
+#zamowienia-table {
+    width: 100%;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+    #zamowienia-table tr.noweZamowienie:nth-child(3n+1) {
+        background-color: #fff5bd;
+        -moz-transition-duration: 3s;
+        -o-transition-duration: 3s;
+        -webkit-transition-duration: 3s;
+        transition-duration: 3s;
+    }
+
+    #zamowienia-table tr:nth-child(3n+1) {
+        background-color: #f1f1f1;
+        -moz-transition-duration: 3s;
+        -o-transition-duration: 3s;
+        -webkit-transition-duration: 3s;
+        transition-duration: 3s;
+    }
+
+        #zamowienia-table tr:nth-child(3n+1) td {
+            padding: 10px;
+        }
+
+        #zamowienia-table tr:nth-child(3n) td {
+            height: 35px;
+        }
+
+#search-form {
+    float: right;
+    padding: 2px 5px 2px 2px;
+    border: 1px solid #e0e0e0;
+}
+
+    #search-form input[type=search] {
+        border: none;
+        height: 25px;
+        width: 224px;
+    }
+
+    #search-form input[type=submit] {
+        width: 20px;
+        border: none;
+        height: 20px;
+        padding: 5px;
+        background-size: 100% 100%;
+        background: transparent url(Images/searchlogo.png) no-repeat;
+    }
+
+div.newFlag {
+    background-image: url(Images/new.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div.bestsellerFlag {
+    background-image: url(Images/bestseller.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.SekcjaKoszyk {
+    width: 748px;
+    float: left;
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+div.SekcjaHeader {
+    border-bottom: 1px solid #DADADA;
+    margin-bottom: 25px;
+}
+
+    div.SekcjaHeader h1 {
+        width: 742px;
+        font-size: 18px;
+        font-weight: normal;
+        font-family: 'Segoe WP SemiBold';
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+#koszykTabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    #koszykTabela tr {
+        border-bottom: 1px solid #DADADA;
+    }
+
+        #koszykTabela tr td {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            vertical-align: middle;
+        }
+
+            #koszykTabela tr td img {
+                width: 138px;
+                height: 138px;
+            }
+
+            #koszykTabela tr td:nth-child(1) {
+                width: 138px;
+                height: 138px;
+                vertical-align: middle;
+            }
+
+            #koszykTabela tr td:nth-child(2) {
+                width: 300px;
+                padding-left: 15px;
+                text-align: left;
+            }
+
+            #koszykTabela tr td:nth-child(3) {
+                width: 60px;
+                text-align: center;
+            }
+
+            #koszykTabela tr td:nth-child(4) {
+                width: 160px;
+                text-align: center;
+            }
+
+            #koszykTabela tr td:nth-child(5) {
+                width: 70px;
+                text-align: center;
+            }
+
+#koszyk-empty-message {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.SekcjaPrzyciski {
+    overflow: hidden;
+}
+
+    .SekcjaPrzyciski :nth-child(1) {
+        float: left;
+    }
+
+    .SekcjaPrzyciski :nth-child(2) {
+        float: right;
+    }
+
+#CenaCalkowita {
+    width: 100%;
+    text-align: right;
+    margin-top: 25px;
+    margin-bottom: 60px;
+    font-family: 'Segoe UI SemiBold';
+    font-size: 18px;
+}
+
+.PrzyciskLink {
+    height: 40px;
+    background-color: #0a5d7c;
+    color: #dfdfdf;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 38px;
+    padding: 2px 15px 2px 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input.PrzyciskLink {
+    border: 0;
+    line-height: 38px;
+    height: 44px;
+    cursor: pointer;
+}
+
+a.PrzyciskLink:visited, a.PrzyciskLink:link, a.PrzyciskLink:active {
+    color: #dfdfdf;
+}
+
+#checkout-address-table {
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: none;
+}
+
+    #checkout-address-table tr {
+        height: 40px;
+    }
+
+        #checkout-address-table tr td {
+            vertical-align: middle;
+        }
+
+            #checkout-address-table tr td:first-child {
+                padding-right: 50px;
+                vertical-align: middle;
+            }
+
+            #checkout-address-table tr td:nth-child(2) {
+                vertical-align: middle;
+            }
+
+            #checkout-address-table tr td:nth-child(3) {
+                padding-left: 10px;
+                font-size: 15px;
+                color: red;
+            }
+
+    #checkout-address-table input {
+        border: 1px solid gray;
+        width: 250px;
+        height: 20px;
+        padding: 5px;
+    }
+
+    #checkout-address-table textarea {
+        width: 250px;
+        border: 1px solid gray;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+#userdata-address-table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: none;
+}
+
+    #userdata-address-table tr {
+        height: 40px;
+    }
+
+        #userdata-address-table tr td {
+            vertical-align: middle;
+        }
+
+            #userdata-address-table tr td:first-child {
+                padding-right: 50px;
+                vertical-align: middle;
+            }
+
+            #userdata-address-table tr td:nth-child(2) {
+                vertical-align: middle;
+            }
+
+            #userdata-address-table tr td:nth-child(3) {
+                padding-left: 10px;
+                font-size: 15px;
+                color: red;
+            }
+
+    #userdata-address-table input {
+        border: 1px solid gray;
+        width: 250px;
+        height: 20px;
+        padding: 5px;
+    }
+
+    #userdata-address-table textarea {
+        width: 250px;
+        border: 1px solid gray;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+#albumedit-address-table {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: none;
+}
+
+    #albumedit-address-table tr {
+        height: 40px;
+    }
+
+        #albumedit-address-table tr td {
+            vertical-align: middle;
+        }
+
+            #albumedit-address-table tr td:first-child {
+                padding-right: 50px;
+                vertical-align: middle;
+            }
+
+            #albumedit-address-table tr td:nth-child(2) {
+                vertical-align: middle;
+            }
+
+            #albumedit-address-table tr td:nth-child(3) {
+                padding-left: 10px;
+                font-size: 15px;
+                color: red;
+            }
+
+    #albumedit-address-table input {
+        border: 1px solid gray;
+        width: 250px;
+        height: 20px;
+        padding: 5px;
+    }
+
+    #albumedit-address-table textarea {
+        width: 250px;
+        border: 1px solid gray;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    #albumedit-address-table select {
+        width: 100%;
+        height: 30px;
+    }
+
+div.upload {
+    width: 157px;
+    height: 57px;
+    background: url(Images/upload.png);
+    overflow: hidden;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+div.upload input {
+    display: block !important;
+    width: 157px !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+
+#login-error {
+    color: red;
+    margin-top: 25px;
+    text-align: center;
+}
+
+
+    #login-error .validation-summary-errors li {
+        list-style-type: none;
+        font-size: 14px;
+    }
+
+.error-summary-centered{
+    text-align: center;
+}
+
+.error-summary-centered .validation-summary-errors li {
+        list-style-type: none;
+        font-size: 14px;
+    }
+
+#login-table {
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-style: none;
+}
+
+    #login-table tr {
+        height: 40px;
+    }
+
+        #login-table tr td {
+            vertical-align: middle;
+        }
+
+        #login-table tr:not(:nth-child(3)) td:first-child {
+            padding-right: 50px;
+            vertical-align: middle;
+        }
+
+        #login-table tr td:nth-child(2) {
+            vertical-align: middle;
+        }
+
+        #login-table tr td:nth-child(3) {
+            padding-left: 10px;
+            font-size: 15px;
+            color: red;
+        }
+
+        #login-table tr:nth-child(3) td {
+            text-align: right;
+            padding: 10px;
+        }
+
+    #login-table input {
+        border: 1px solid gray;
+        width: 250px;
+        height: 20px;
+        padding: 5px;
+    }
+
+        #login-table input[type=checkbox] {
+            width: 40px;
+        }
+
+    #login-table textarea {
+        width: 250px;
+        border: 1px solid gray;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    #login-table .login-validation-message {
+        margin-bottom: 7px;
+        color: red !important;
+        font-size: 14px;
+    }
+
+    #login-table .text-danger {
+        text-decoration: none;
+    }
+
+#login-header {
+}
+
+    #login-header div {
+        line-height: 40px;
+        padding-right: 15px;
+        color: #39312e;
+        font-size: 10pt;
+        float: right;
+    }
+
+#password-table {
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-style: none;
+}
+
+    #password-table tr {
+        height: 40px;
+    }
+
+        #password-table tr td {
+            vertical-align: middle;
+        }
+
+        #password-table tr:not(:nth-child(3)) td:first-child {
+            padding-right: 50px;
+            vertical-align: middle;
+        }
+
+        #password-table tr td:nth-child(2) {
+            vertical-align: middle;
+        }
+
+        #password-table tr td:nth-child(3) {
+            padding-left: 10px;
+            font-size: 15px;
+            color: red;
+        }
+
+    #password-table input {
+        border: 1px solid gray;
+        width: 250px;
+        height: 20px;
+        padding: 5px;
+    }
+
+        #password-table input[type=checkbox] {
+            width: 40px;
+        }
+
+    #password-table textarea {
+        width: 250px;
+        border: 1px solid gray;
+        padding: 5px;
+        margin-top: 5px;
+    }
+
+    #password-table .login-validation-message {
+        margin-bottom: 7px;
+        color: red !important;
+        font-size: 14px;
+    }
+
+    #password-table .text-danger {
+        text-decoration: none;
+    }
+
+.manage-error {
+    color: red;
+    margin-top: 25px;
+    text-align: center;
+}
+
+    .manage-error .validation-summary-errors li {
+        list-style-type: none;
+        font-size: 14px;
+    }
+
+.manage-message {
+    color: darkgreen;
+    margin-top: 25px;
+    text-align: center;
+}
+
+ .manageLink {
+            height: 42px;
+            float: left;
+            line-height: 40px;
+            font-size: 14px;
+            padding-left: 40px;
+            padding-right: 10px;
+            background-color: #0a5d7c;
+            color: white;
+        }
+
+a.manageLink, a.manageLink:hover, a.manageLink:visited {
+            color: white;
+        }
+
+.SekcjaKoszyk .validation-summary-errors {
+    color: red;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+footer {
+    width: 100%;
+    height: 42px;
+    background-color: #0a5d7c;
+    margin-top: 75px;
+    /*overflow: hidden;*/
+}
+
+    footer nav {
+        display: table;
+        overflow: hidden;
+        height: 100%;
+        float: left;
+    }
+
+        footer nav ul {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+            footer nav ul li {
+                font-size: 14px;
+                color: white;
+                float: left;
+                margin-left: 55px;
+            }
+
+                footer nav ul li a, footer nav ul li a:hover, footer nav ul li a:visited, footer nav ul li a:active, footer nav ul li a:link {
+                    color: white;
+                }
+
+                    footer nav ul li a:hover {
+                        text-decoration: underline;
+                        color: white;
+                    }
+
+                    footer nav ul li a:visited {
+                        color: white;
+                    }
+
+    footer #footerLogo {
+        float: right;
+        margin-top: 8px;
+    }
+
+    footer #footerCopyright {
+        width: 215px;
+        float: right;
+        background-color: #0a5d7c;
+        line-height: 42px;
+        height: 100%;
+        font-size: 14px;
+        color: white;
+        padding-left: 15px;
+    }
+
+.submitLink {
+    background-color: transparent;
+    border: none !important;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: right;
+}
