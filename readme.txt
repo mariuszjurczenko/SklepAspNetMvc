@@ -1,3 +1,6 @@
+# Asp.Net MVC Praktyczny Kurs
+-  mariuszjurczenko@dev-hobby.pl 
+
 Praktyczne rozwiązanie wykorzystujące technologię Asp.Net Mvc pokazujące krok po kroku budowanie serwisu internetowego sprzedającego kursy on-line
 W kursie będziemy korzystać z Visual Studio Comunity oraz wbudowanej bazy danych localDb. 
 Skorzystamy również z systemu do wersjonowania kodu i zarządzania projektem VisualStudio Online, będziemy korzystać z Gita.
